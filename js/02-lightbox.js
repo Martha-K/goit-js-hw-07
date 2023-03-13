@@ -21,13 +21,8 @@ const gallery = document.querySelector(".gallery");
 
 gallery.innerHTML = items;
 
-gallery.addEventListener("click", gettingBigPicture);
-
-function gettingBigPicture(event) {
-  event.preventDefault();
-  let galleryBox = new SimpleLightbox(".gallery a", {
-    captionsData: "alt",
-    captionDelay: 250,
-  });
-  galleryBox.on("shown.simplelightbox", function () {});
-}
+const galleryBox = new SimpleLightbox(".gallery a", {
+  captionsData: "alt",
+  captionDelay: 250,
+});
+galleryBox.on("shown.simplelightbox", function () {});
